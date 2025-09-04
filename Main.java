@@ -7,6 +7,6 @@ public class Main {
         System.out.println("Ivanov Roman"); //Выводит имя
         int income = 44000;
         int spending = 30000;
-        System.out.println(income-spending); //Выводит остаток
+        System.out.println("Итого (руб):"income-spending); //Выводит остаток
     }
 }
