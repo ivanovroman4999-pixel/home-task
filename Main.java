@@ -7,11 +7,11 @@ public class Main {
         int price = scanner.nextInt();
         System.out.print("Введите вес товара (в кг.):");
         int weight = scanner.nextInt();
-        int poshlina = calculateCustoms(price, weight);
-        System.out.println("Размер пошлины (в руб.) составит: " + poshlina);
+        int duty  = calculateCustoms(price, weight);
+        System.out.println("Размер пошлины (в руб.) составит: " + duty);
     }
     public static int calculateCustoms(int price, int weight) {
-        int result = price/100 + weight*100;
-        return result;
+        int duty  = price/100 + weight*100;
+        return duty;
      }
 }
