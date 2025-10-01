@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import ru.netology.service.CustomService;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,11 +8,11 @@ public class Main {
         int price = scanner.nextInt();
         System.out.print("Введите вес товара (в кг.):");
         int weight = scanner.nextInt();
-        int duty  = calculateCustoms(price, weight);
-        System.out.println("Размер пошлины (в руб.) составит: " + duty);
+        int poshlina = calculateCustoms(price, weight);
+        System.out.println("Размер пошлины (в руб.) составит: " + poshlina);
     }
-    public static int calculateCustoms(int price, int weight) {
-        int duty  = price/100 + weight*100;
-        return duty;
+    public static int calculateCustoms(int a, int b) {
+        int result = a/100 + b*100;
+        return result;
      }
 }
