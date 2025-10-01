@@ -10,8 +10,8 @@ public class Main {
         int poshlina = calculateCustoms(price, weight);
         System.out.println("Размер пошлины (в руб.) составит: " + poshlina);
     }
-    public static int calculateCustoms(int a, int b) {
-        int result = a/100 + b*100;
+    public static int calculateCustoms(int price, int weight) {
+        int result = price/100 + weight*100;
         return result;
      }
 }
