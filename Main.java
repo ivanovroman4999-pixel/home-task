@@ -32,16 +32,16 @@ public class Main {
                 case 3:
                     int taxEarningsMinusSpendings2 = taxEarningsMinusSpendings(earnings, spendings);
                     int taxEarnings2 = taxEarnings(earnings);
-                    if (taxEarnings2<taxEarningsMinusSpendings2){
+                    if (taxEarnings2 < taxEarningsMinusSpendings2) {
                         System.out.println("Мы советуем вам УСН доходы");
-                        System.out.println("Ваш налог составит:"+ taxEarnings2);
+                        System.out.println("Ваш налог составит:" + taxEarnings2);
                         System.out.println("Налог на другой системе:" + taxEarningsMinusSpendings2);
-                        System.out.println("Экономия:"+ (taxEarningsMinusSpendings2-taxEarnings2 ));
-                    } else if(taxEarnings2>taxEarningsMinusSpendings2) {
+                        System.out.println("Экономия:" + (taxEarningsMinusSpendings2 - taxEarnings2));
+                    } else if (taxEarnings2 > taxEarningsMinusSpendings2) {
                         System.out.println("Мы советуем вам УСН доходы минус расходы");
-                        System.out.println("Ваш налог составит:"+ taxEarningsMinusSpendings2);
+                        System.out.println("Ваш налог составит:" + taxEarningsMinusSpendings2);
                         System.out.println("Налог на другой системе:" + taxEarnings2);
-                        System.out.println("Экономия:"+ (taxEarnings2-taxEarningsMinusSpendings2));
+                        System.out.println("Экономия:" + (taxEarnings2 - taxEarningsMinusSpendings2));
                     } else {
                         System.out.println("Можете выбрать любую систему налогообложения");
                     }
@@ -52,6 +52,7 @@ public class Main {
         System.out.println("Программа завершена!");
 
     }
+
     public static int taxEarningsMinusSpendings(int earnings, int spendings) {
         int tax = (earnings - spendings) * 15 / 100;
         if (tax >= 0) {
@@ -60,6 +61,7 @@ public class Main {
             return 0;
         }
     }
+
     public static int taxEarnings(int earnings) {
         int tax = (earnings) * 6 / 100;
         if (tax >= 0) {
