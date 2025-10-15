@@ -16,18 +16,23 @@ public class Book {
     public boolean isBig() {
         if (pages > 500) {
             return true;
-        } else
+        } else {
             return false;
+        }
     }
     public boolean matches(String word) {
         if (title.contains(word) || author.contains(word)){
             return true;
-        } else return false;
+        } else {
+        return false;
+        }
     }
     public int estimatePrice(int pages) {
         int price = pages*3;
         if (price<250) {
             return 250;
-        } else return price;
+        } else{
+            return price;
+        }
     }
 }
