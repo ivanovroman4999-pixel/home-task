@@ -14,20 +14,12 @@ public class Book {
 
 
     public boolean isBig() {
-        if (pages > 500) {
-            return true;
-        } else {
-            return false;
-        }
+        return pages > 500;
 
     }
 
     public boolean matches(String word) {
-        if (title.contains(word) || author.contains(word)) {
-            return true;
-        } else {
-            return false;
-        }
+        return title.contains(word) || author.contains(word);
     }
 
     public int estimatePrice(int pages) {
