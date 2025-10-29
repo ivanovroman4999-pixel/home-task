@@ -1,19 +1,33 @@
+import java.util.Random;
+
 public class Main {
+    public static final int SIZE = 8;
+
     public static void main(String[] args) {
-        Book book = new Book("Ядовитый клинок", 2021, "Anya", 506);
-        System.out.println(book.isBig());
-        System.out.println(book.matches("Abc"));
-        System.out.println(book.estimatePrice(book.pages));
+        int[][] colors = new int[SIZE][SIZE];
+        int[][] rotatedColors = new int[SIZE][SIZE];
+        Random random = new Random();
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                colors[i][j] = random.nextInt(256);
+            }
+        }
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                rotatedColors[i][SIZE - 1 - j] = colors[j][i];
+            }
+        }
+        matrix(colors);
+        System.out.println();
+        matrix(rotatedColors);
+    }
 
-        Book book2 = new Book("Олимп", 2024, "Pikls", 25);
-        System.out.println(book2.isBig());
-        System.out.println(book2.matches("Pikls"));
-        System.out.println(book2.estimatePrice(book2.pages));
-
-        Book book3 = new Book("Я переродился торговым автоматом", 2022, "Petya", 307);
-        System.out.println(book3.isBig());
-        System.out.println(book3.matches("лся"));
-        System.out.println(book3.estimatePrice(book3.pages));
-
+    public static void matrix(int[][] colors) {
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                System.out.format("%4d", colors[i][j]);
+            }
+            System.out.println();
+        }
     }
 }
